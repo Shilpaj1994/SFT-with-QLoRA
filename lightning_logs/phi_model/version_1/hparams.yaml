@@ -1,0 +1,50 @@
+config:
+  compile_model: false
+  model: !!python/object:config.ModelConfig
+    attention_dropout: 0.0
+    embed_dropout: 0.0
+    hidden_act: gelu_new
+    hidden_size: 2560
+    intermediate_size: 10240
+    layer_norm_eps: 1.0e-05
+    model_name_or_path: microsoft/phi-2
+    num_attention_heads: 32
+    num_hidden_layers: 32
+    resid_dropout: 0.1
+    rotary_emb: true
+    tie_word_embeddings: true
+    vocab_size: 51200
+  training: !!python/object:config.TrainingConfig
+    adam_beta1: 0.9
+    adam_beta2: 0.999
+    adam_epsilon: 1.0e-08
+    clear_cache_every: 0
+    eval_steps: 500
+    evaluation_strategy: steps
+    fp16: true
+    generate_every: 500
+    gradient_accumulation_steps: 16
+    learning_rate: 5.0e-05
+    log_every: 50
+    logging_steps: 100
+    lr_scheduler_type: cosine
+    max_grad_norm: 1.0
+    max_new_tokens: 100
+    num_train_epochs: 3
+    report_to: tensorboard
+    save_steps: 1000
+    save_total_limit: 3
+    scheduler: !!python/object:config.SchedulerConfig
+      anneal_strategy: cos
+      div_factor: 25.0
+      final_div_factor: 10.0
+      max_lr: 5.0e-05
+      pct_start: 0.05
+      three_phase: false
+    temperature: 0.8
+    top_k: 40
+    warmup_ratio: 0.03
+    weight_decay: 0.01
+learning_rate: null
+max_steps: null
+weight_decay: null
