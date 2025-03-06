@@ -1,0 +1,31 @@
+# Core dependencies
+torch>=2.0.0
+transformers>=4.37.0
+datasets>=2.12.0
+accelerate>=0.20.0
+peft>=0.5.0
+
+# Quantization and optimization
+bitsandbytes>=0.40.0
+optimum>=1.12.0
+safetensors>=0.3.1
+
+# Training frameworks
+pytorch-lightning>=2.0.0
+deepspeed>=0.10.0
+
+# Monitoring and logging
+tensorboard>=2.12.0
+wandb>=0.15.0
+matplotlib>=3.7.0
+evaluate>=0.4.0
+
+# Data processing
+nltk>=3.8.0
+pandas>=2.0.0
+scipy>=1.10.0
+tqdm>=4.65.0
+
+# Optional: For better text processing
+sentencepiece>=0.1.99
+tokenizers>=0.13.3
