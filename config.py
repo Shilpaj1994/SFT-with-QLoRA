@@ -55,7 +55,7 @@ class QLoRAConfig:
     """
     Configuration for QLoRA (Quantized Low Rank Adaptation).
     """
-    use_qlora: bool = False
+    use_qlora: bool = True
     bits: int = 4
     lora_r: int = 16
     lora_alpha: int = 32
